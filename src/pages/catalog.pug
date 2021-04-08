@@ -1,0 +1,82 @@
+include ./_mixins
+include ./_data
+
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        +metahead
+        title rizdvo 
+        include ./_styles    
+
+    body(id="catalog-page").catalog-page
+        +header("type-2")
+
+        main
+            section.section-filter
+                .container      
+                    .filter
+                        .filter-header
+                            .title-2 Елки
+                            button.filter-btn(id="filter-btn")
+                                img(src="./images/filter-icon.svg", alt="")
+                                span Фильтр
+            section
+                .container      
+                    .tabs
+                        .tabs-caption
+                            .tab-button.active Материал
+                            .tab-button Высота
+                            .tab-button Цвет
+                            .tab-button Декор
+                            .tab-button Цена
+                        .tabs-content.active
+                            .tabs-content-inner
+                                each item in material
+                                    a(href="#")= item
+                        .tabs-content
+                            .tabs-content-inner
+                                each item in height
+                                    a(href="#")= item
+                        .tabs-content
+                            .tabs-content-inner
+                                each item in color
+                                    a(href="#")= item
+                        .tabs-content
+                            .tabs-content-inner
+                                a(href="#") До 500 грн.
+                                a(href="#") От 500-999 грн.
+                                a(href="#") От 1000 - 3000 грн.
+                                a(href="#") Больше 3000 грн.
+                        .tabs-content
+                            .tabs-content-inner
+                                a(href="#") До 500 грн.
+                                a(href="#") От 500-999 грн.
+                                a(href="#") От 1000 - 3000 грн.
+                                a(href="#") Больше 3000 грн.
+            each category in menu[0].submenu
+                section.catalog-group
+                    .container  
+                        .title-3= category.name
+                        .subtitle Ветки Елое состоят из одного материала - литой эластичный пластик
+                        .row
+                            each item in category.list
+                                a(href="category.html").category-card
+                                    .category-card-img
+                                        img(src="./images/catalog.jpg", alt="")
+                                    .category-card-name=item
+            section.section-about
+                .container  
+                    .title-3 Как выбирать новогодние искусственные елки
+                    p В ожидании новогодних праздников каждый человек занят выбором елки. Ведь именно ель и сосна являются главными атрибутами Нового года. Елка создает сказочную новогоднюю атмосферу, принося радость детям своими разноцветными шарами и яркими огнями, 
+                    button.btn-read-more Читать далее
+        +menu 
+        +filter
+        +footer
+        include ./_scripts 
+        script(src="./js/menu.js")
+        script(src="./js/filter.js")
+        script(src="./js/main.js")
+          

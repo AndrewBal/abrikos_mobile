@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>rizdvo </title>
+    <!-- для галереи-->
+    <link rel="stylesheet" href="./css/jquery.fancybox.min.css"/>
+    <!-- для фильтра-->
+    <link rel="stylesheet" href="./css/jquery-ui.min.css"/>
+    <!-- для слайдера-->
+    <link rel="stylesheet" href="./css/swiper.min.css"/>
+    <!-- custom css-->
+    <link rel="stylesheet" href="./css/style.css"/>
+  </head>
+  <body class="index-page" id="index-page">
+    <!-- mixin header-->
+    <header class="header">
+      <div class="container">
+        <div class="header-main">
+          <button class="menu-btn" id="menu-btn">
+            <div class="burger"></div>
+          </button><a class="btn-back" href="category.html"><img src="./images/back.svg" alt=""/></a>
+          <div class="header-logo">   <img src="./images/logo.svg" alt=""/></div>
+          <div class="header-breadcrumbs">
+            <ul class="breadcrumbs">
+              <li class="breadcrumbs-item"> <a href="index.html">Фабрика Риздво</a></li>
+              <li class="breadcrumbs-item"> <a href="catalog.html">Елки</a></li>
+              <li class="breadcrumbs-item current"> <span>Люкс</span></li>
+            </ul>
+          </div>
+          <div id="cart_block"><a href="#" title="Корзина" rel="nofollow"> <img src="./images/basket.svg" alt=""/></a>
+            <div class="block_content">
+              <!-- Если есть товар в корзине-->
+              <div id="cart_block_summary"><span class="ajax_cart_quantity">5</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="header-bottom"><a href="#"> <img src="./images/call.svg" alt=""/><span>+38 (098) 261 17 33</span></a></div>
+      </div>
+    </header>
+    <!-- / mixin header -->
+    <main>
+      <section class="section-main">
+        <div class="section-main-slider">   
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" style="background-image:url(./images/slider-img.jpg)">
+                <div class="title-1">Большая <br>Распродажа </div>
+                <p>Успей купить <br>по сниженной цене</p>
+              </div>
+              <div class="swiper-slide" style="background-image:url(./images/slider-img.jpg)">
+                <div class="title-1">Большая <br>Распродажа </div>
+                <p>Успей купить <br>по сниженной цене</p>
+              </div>
+              <div class="swiper-slide" style="background-image:url(./images/slider-img.jpg)">
+                <div class="title-1">Большая <br>Распродажа </div>
+                <p>Успей купить <br>по сниженной цене</p>
+              </div>
+            </div>
+          </div>
+          <div class="section-main-timer">
+            <div class="section-main-timer-title"> 
+              <p>Осталось:</p>
+            </div>
+            <div class="homepage-slider__countdown" data-countdown="2020/11/13"></div>
+          </div>
+        </div>
+      </section>
+      <section class="section-tree-category">
+        <div class="container"> 
+          <div class="title-2">Категории Елок</div>
+          <div class="row"><a class="tree-card" href="#">
+              <div class="tree-card-img"><img src="./images/categ-img.png" alt=""/></div>
+              <div class="tree-card-name">Литые</div>
+              <ul class="tree-card-properties">
+                <li> <span>Высота</span><span>25-300 см.</span></li>
+                <li> <span>Цвет</span><span>Зеленый</span></li>
+                <li> <span>Диаметр хвои</span><span>5-7 см.</span></li>
+              </ul></a><a class="tree-card" href="#">
+              <div class="tree-card-img"><img src="./images/categ-img.png" alt=""/></div>
+              <div class="tree-card-name">Комби</div>
+              <ul class="tree-card-properties">
+                <li> <span>Высота</span><span>25-300 см.</span></li>
+                <li> <span>Цвет</span><span>Зеленый</span></li>
+                <li> <span>Диаметр хвои</span><span>5-7 см.</span></li>
+              </ul></a><a class="tree-card" href="#">
+              <div class="tree-card-img"><img src="./images/categ-img.png" alt=""/></div>
+              <div class="tree-card-name">Леска</div>
+              <ul class="tree-card-properties">
+                <li> <span>Высота</span><span>25-300 см.</span></li>
+                <li> <span>Цвет</span><span>Зеленый</span></li>
+                <li> <span>Диаметр хвои</span><span>5-7 см.</span></li>
+              </ul></a><a class="tree-card" href="#">
+              <div class="tree-card-img"><img src="./images/categ-img.png" alt=""/></div>
+              <div class="tree-card-name">Пленка</div>
+              <ul class="tree-card-properties">
+                <li> <span>Высота</span><span>25-300 см.</span></li>
+                <li> <span>Цвет</span><span>Зеленый</span></li>
+                <li> <span>Диаметр хвои</span><span>5-7 см.</span></li>
+              </ul></a>
+          </div>
+        </div>
+      </section>
+      <section class="section-select-tree">
+        <div class="container"> 
+          <p class="title-2">Выбирайте Елочку</p>
+          <div class="accordion-item">
+            <div class="accordion-item-title"><span>По материалу</span>
+              <svg class="icon icon-arrow ">
+                <use xlink:href="./images/sprite-inline.svg#arrow"></use>
+              </svg>
+            </div>
+            <div class="accordion-item-content" style="display:none">
+              <ul> 
+                <li><a href="#">Литой пластик</a></li>
+                <li><a href="#">Пленка</a></li>
+                <li><a href="#">Моноволокно (леска)</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-item-title"><span>По материалу</span>
+              <svg class="icon icon-arrow ">
+                <use xlink:href="./images/sprite-inline.svg#arrow"></use>
+              </svg>
+            </div>
+            <div class="accordion-item-content" style="display:none">
+              <ul> 
+                <li><a href="#">Литой пластик</a></li>
+                <li><a href="#">Пленка</a></li>
+                <li><a href="#">Моноволокно (леска)</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-item-title"><span>По высоте</span>
+              <svg class="icon icon-arrow ">
+                <use xlink:href="./images/sprite-inline.svg#arrow"></use>
+              </svg>
+            </div>
+            <div class="accordion-item-content" style="display:none">
+              <ul> 
+                <li><a href="#">150</a></li>
+                <li><a href="#">180</a></li>
+                <li><a href="#">200</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-item-title"><span>По цвету</span>
+              <svg class="icon icon-arrow ">
+                <use xlink:href="./images/sprite-inline.svg#arrow"></use>
+              </svg>
+            </div>
+            <div class="accordion-item-content" style="display:none">
+              <ul> 
+                <li><a href="#">Зеленый</a></li>
+                <li><a href="#">Голубой</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-accessories-category">
+        <div class="container"> 
+          <div class="title-2">Аксессуары</div>
+          <div class="row"><a class="accessory-card" href="#">
+              <div class="accessory-card-img"><img src="./images/accessor-1.png" alt=""/></div>
+              <div class="accessory-card-name">Новогодние игрушки</div></a><a class="accessory-card" href="#">
+              <div class="accessory-card-img"><img src="./images/accessor-2.png" alt=""/></div>
+              <div class="accessory-card-name">Подставки</div></a><a class="accessory-card" href="#">
+              <div class="accessory-card-img"><img src="./images/accessor-3.png" alt=""/></div>
+              <div class="accessory-card-name">Электрогирлянды</div></a><a class="accessory-card" href="#">
+              <div class="accessory-card-img"><img src="./images/accessor-4.png" alt=""/></div>
+              <div class="accessory-card-name">Изделия из хвои</div></a>
+          </div>
+        </div>
+      </section>
+      <section class="section-about">
+        <div class="container"> 
+          <div class="title-2">О нашем магазине</div>
+          <div class="videowrapper"><iframe src="https://www.youtube.com/embed/I5e70VILTSo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+          <div class="title-3">Почему стоит купить искусственную елку в интернет-магазине Фабрика Рiздво</div>
+          <p>В преддверие Нового года и дети, и взрослые с нетерпением ждут момента, когда можно наряжать елку. Именно с ней приходит ощущение этого веселого зимнего праздника. Сейчас искусственные ели являются достойной заменой своим живым прототипам, благодаря таким преимуществам:</p>
+          <button class="btn-read-more">Читать далее</button>
+        </div>
+      </section>
+    </main>
+    <div class="menu" id="menu">
+      <div class="menu-content">
+        <div class="menu-content-head" id="menu-close"><span>Меню</span><img src="./images/close.svg" alt=""/></div>
+        <div class="menu-content-body">
+          <ul>
+            <li> <a class="with-submenu" href="catalog.html">Ёлки
+                <div class="submenu-show"></div></a>
+              <ul> 
+                <li class="submenu-btn-back">Назад </li><a class="with-submenu" href="category.html">Литые
+                  <div class="submenu-show"></div></a>
+                <ul>
+                  <li class="submenu-btn-back">Назад </li>
+                  <li> <a href="product.html">Люкс</a></li>
+                  <li> <a href="product.html">Голубая Элит</a></li>
+                  <li> <a href="product.html">Премиум</a></li>
+                  <li> <a href="product.html">Царская</a></li>
+                  <li> <a href="product.html">Канадская</a></li>
+                </ul><a class="with-submenu" href="category.html">Комби
+                  <div class="submenu-show"></div></a>
+                <ul>
+                  <li class="submenu-btn-back">Назад </li>
+                  <li> <a href="product.html">Рождественская LED</a></li>
+                  <li> <a href="product.html">Альпийская</a></li>
+                  <li> <a href="product.html">Венеция</a></li>
+                  <li> <a href="product.html">Сказка</a></li>
+                  <li> <a href="product.html">Грация</a></li>
+                </ul><a class="with-submenu" href="category.html">Леска
+                  <div class="submenu-show"></div></a>
+                <ul>
+                  <li class="submenu-btn-back">Назад </li>
+                  <li> <a href="product.html">Микс</a></li>
+                  <li> <a href="product.html">Распушена</a></li>
+                </ul><a class="with-submenu" href="category.html">Пленка
+                  <div class="submenu-show"></div></a>
+                <ul>
+                  <li class="submenu-btn-back">Назад </li>
+                  <li> <a href="product.html">Классика</a></li>
+                </ul>
+              </ul>
+            </li>
+            <li><a href="#">Уличные Аксессуары</a>
+            </li>
+            <li><a class="sale" href="#"><span>Акции</span></a>
+            </li>
+          </ul>
+          <div class="menu-phones"><a href="#"> <img src="./images/phone.svg" alt=""/><span>+38 (098) 261 17 33</span></a><a href="#"> <img src="./images/phone.svg" alt=""/><span>+38 (098) 261 17 33</span></a><a href="#"> <img src="./images/phone.svg" alt=""/><span>+38 (098) 261 17 33</span></a></div>
+          <div class="menu-additional"><a href="#">Доставка</a><a href="#">Обмен и возврат</a><a href="#">Блог</a><a href="#">Контакты</a></div>
+          <div class="menu-language"><a href="#"> <img src="./images/ru.svg" alt=""/></a><a href="#"> <img src="./images/ua.svg" alt=""/></a></div>
+        </div>
+      </div>
+    </div>
+    <!-- mixin footer-->
+    <footer class="footer">
+      <div class="subscribe">
+        <div class="title-2">Подпишись на Акции</div>
+        <div class="container">
+          <div class="subscribe-form">   
+            <input class="subscribe-form-input" placeholder="Введите Email"/>
+          </div>
+        </div>
+        <div class="subscribe-social"><a href="#"><img src="./images/social-3.svg" alt=""/></a><a href="#"><img src="./images/social-2.svg" alt=""/></a><a href="#"><img src="./images/social-1.svg" alt=""/></a></div>
+      </div>
+      <div class="help">
+        <div class="container">
+          <div class="accordion-item accordion-item--red">
+            <div class="accordion-item-title"><span>Условия</span>
+              <svg class="icon icon-arrow ">
+                <use xlink:href="./images/sprite-inline.svg#arrow"></use>
+              </svg>
+            </div>
+            <div class="accordion-item-content" style="display:none">
+              <ul> 
+                <li><a href="#">Оптовикам</a></li>
+                <li><a href="#">Дропшиппинг</a></li>
+                <li><a href="#">Статьи и обзоры</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="accordion-item accordion-item--red">
+            <div class="accordion-item-title"><span>Помощь</span>
+              <svg class="icon icon-arrow ">
+                <use xlink:href="./images/sprite-inline.svg#arrow"></use>
+              </svg>
+            </div>
+            <div class="accordion-item-content" style="display:none">
+              <ul> 
+                <li><a href="#">Оптовикам</a></li>
+                <li><a href="#">Дропшиппинг</a></li>
+                <li><a href="#">Статьи и обзоры</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="accordion-item accordion-item--red">
+            <div class="accordion-item-title"><span>Сотрудничесто</span>
+              <svg class="icon icon-arrow ">
+                <use xlink:href="./images/sprite-inline.svg#arrow"></use>
+              </svg>
+            </div>
+            <div class="accordion-item-content" style="display:none">
+              <ul> 
+                <li><a href="#">Оптовикам</a></li>
+                <li><a href="#">Дропшиппинг</a></li>
+                <li><a href="#">Статьи и обзоры</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact">
+        <div class="container">
+          <div class="contact-title">Контакты</div>
+          <div class="contact-item">
+            <div class="contact-item-icon"><img src="./images/clock.svg" alt=""/></div>
+            <div class="contact-item-text">
+              <p>Пн - Пт: с 9:00 до 18:00 </p>
+              <p>СБ - Вс: выходной</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon"><img src="./images/mail.svg" alt=""/></div>
+            <div class="contact-item-text">
+              <p> <a href="mailto:info@rizdvo.ua">info@rizdvo.ua</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon"><img src="./images/place.svg" alt=""/></div>
+            <div class="contact-item-text">
+              <p>Днепр,<br>пр. Слобожанський, 29, оф. 701</p>
+            </div>
+          </div>
+          <div class="copyright">
+            <p>© 2019 Все права защищены</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- / mixin footer -->
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <!-- для меню и фильтра-->
+    <script src="./js/gsap.min.js"></script>
+    <!-- для слайдера-->
+    <script src="./js/swiper.min.js"></script>
+    <!-- для таймера-->
+    <script src="./js/jquery.countdown.min.js"></script>
+    <!-- для фильтра где цена-->
+    <script src="./js/jquery-ui.min.js"></script>
+    <script src="./js/jquery.ui.touch-punch.min.js"></script>
+    <!-- для галереи-->
+    <script src="./js/jquery.fancybox.min.js"></script>
+    <!-- Custom js-->
+    <script src="./js/menu.js"></script>
+    <script src="./js/main-slider.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

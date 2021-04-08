@@ -1,0 +1,40 @@
+include ./_mixins
+include ./_data
+
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        +metahead
+        title rizdvo 
+        include ./_styles    
+
+    body(id="category-page").category-page
+        +header("type-2")
+
+        main
+            section.section-filter
+                .container      
+                    .filter
+                        .filter-header
+                            .title-2 Люкс
+                            button.filter-btn(id="filter-btn")
+                                img(src="./images/filter-icon.svg", alt="")
+                                span Фильтр
+                        
+            section.category
+                .container  
+                    .row.product-list
+                        -for(var i=0;i<2;i++)
+                            each item in status
+                                +product-card(item)
+        +menu 
+        +filter
+        +footer
+        include ./_scripts 
+        script(src="./js/menu.js")
+        script(src="./js/filter.js")
+        script(src="./js/main.js")
+          

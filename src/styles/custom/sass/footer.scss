@@ -1,0 +1,65 @@
+@import "_variables";
+
+.footer{
+    background: $white;
+    color: #000;
+    .subscribe{
+        background: #777;
+        padding: 5px 0;
+        &-form{
+            padding: 0 20px;
+            margin-bottom: 20px;
+            @include font-2;
+            &-input{
+                height: 56px;
+                border: 1px solid $br;
+                color: #fff;
+                padding: 15px;
+                width: 100%;
+            }
+        }
+        &-social{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            border-top: 1px solid #fff;
+            padding: 10px 0;
+            a{
+                padding: 15px;
+            }
+        }
+    }   
+    .help{
+        padding-top: 10px;
+    }
+    .contact{
+        padding: 10px 20px;
+        @include font-2;
+        &-title{
+            font-weight: 500;
+            font-size: 20px;
+            margin-bottom: 30px;
+            @include font-1;
+        }
+        &-item{
+            display: flex;
+            align-content: flex-start;
+            margin-bottom: 15px;
+            &-icon{
+                flex-shrink: 0;
+                margin-right: 15px;
+                padding-top: 4px;
+            }
+            &-text{
+                font-size: 14px;
+                line-height: (22/14);
+            }
+        }
+        .copyright{
+            font-size: 14px;
+            border-top: 1px solid $br;
+            padding: 16px 0;
+        }
+    }
+}

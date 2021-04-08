@@ -1,0 +1,321 @@
+include ./_mixins
+include ./_data
+
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        +metahead
+        title rizdvo 
+        include ./_styles    
+
+    body(id="product-page").product-page
+        +header("type-2")
+
+        main
+            section.product
+                .product-gallery-slider
+                    .swiper-container
+                        .swiper-wrapper
+                            a(href="https://images.ua.prom.st/116207996_w640_h640_elka-iskusstvennaya-kedr.jpg" data-fancybox="images").swiper-slide
+                                img(src="./images/prod-img.jpg", alt="")
+                            a(href="https://images.ua.prom.st/116207996_w640_h640_elka-iskusstvennaya-kedr.jpg" data-fancybox="images").swiper-slide
+                                img(src="./images/prod-img.jpg", alt="")
+                .container
+                    .product-box.product-main
+                        .product-main-top
+                            .product-main-top-left
+                                .product-price 2 200 грн.
+                                .product-oldprice 2 800 грн.
+                                .product-status.status-green Есть на складе
+                            .product-main-top-right
+                                .sale-title До конца акции:
+                                .product-countdown(data-countdown="2020/11/13")
+                        .product-main-info
+                            .title-2 Сосна Микс 180
+                            p Насыщенные оттенки зеленого – именно так можно охарактеризовать сосну «Микс». Дизайнеры, создавая ее эскиз, смешали несколько оттенков, и в итоге мы получили это стильное дерево. Хвоя сосны жесткая, напоминающая “ершик” для мытья...
+                            .title-3 Характеристики
+                            ul.product-properties
+                                li 
+                                    span Высота
+                                    span 25-300 см.
+                                li 
+                                    span Цвет
+                                    span Зеленый
+                                li 
+                                    span Диаметр хвои
+                                    span 5-7 см.
+                    .product-box.product-feedback
+                        .rating
+                            .rating-value 
+                                span 3.0
+                            .rating-stars
+                                img(src="./images/star-fill.svg", alt="")
+                                img(src="./images/star-fill.svg", alt="")
+                                img(src="./images/star-fill.svg", alt="")
+                                img(src="./images/star-border.svg", alt="")
+                                img(src="./images/star-border.svg", alt="")
+                        a(href="javascript:;" id="show-reviews-modal").link Отзывы и вопросы
+                        .product-feedback-modal(id="all-reviews-modal")
+                            .product-feedback-modal-close
+                                img(src="./images/close.svg", alt="")
+                                span Отзывы
+                            .product-feedback-modal-content
+                                .product-reviews-rating
+                                    .product-reviews-rating-main
+                                        p 3.0 
+                                            span / 5
+                                        .rating-stars
+                                            img(src="./images/star-fill.svg", alt="")
+                                            img(src="./images/star-fill.svg", alt="")
+                                            img(src="./images/star-fill.svg", alt="")
+                                            img(src="./images/star-border.svg", alt="")
+                                            img(src="./images/star-border.svg", alt="")
+                                        .reviews-value 45 оценок
+                                    .product-reviews-rating-list
+                                        .product-reviews-rating-list-item
+                                            .rating-stars
+                                                img(src="./images/star-fill.svg", alt="")
+                                                img(src="./images/star-fill.svg", alt="")
+                                                img(src="./images/star-fill.svg", alt="")
+                                                img(src="./images/star-fill.svg", alt="")
+                                                img(src="./images/star-fill.svg", alt="")
+                                            +rating-progress(20,3)
+                                        .product-reviews-rating-list-item
+                                            .rating-stars
+                                                img(src="./images/star-fill.svg", alt="")
+                                                img(src="./images/star-fill.svg", alt="")
+                                                img(src="./images/star-fill.svg", alt="")
+                                                img(src="./images/star-fill.svg", alt="")
+                                                img(src="./images/star-border.svg", alt="")
+                                            +rating-progress(30,5)
+                                        .product-reviews-rating-list-item
+                                            .rating-stars
+                                                img(src="./images/star-fill.svg", alt="")
+                                                img(src="./images/star-fill.svg", alt="")
+                                                img(src="./images/star-fill.svg", alt="")
+                                                img(src="./images/star-border.svg", alt="")
+                                                img(src="./images/star-border.svg", alt="")
+                                            +rating-progress(90,34)
+                                        .product-reviews-rating-list-item
+                                            .rating-stars
+                                                img(src="./images/star-fill.svg", alt="")
+                                                img(src="./images/star-fill.svg", alt="")
+                                                img(src="./images/star-border.svg", alt="")
+                                                img(src="./images/star-border.svg", alt="")
+                                                img(src="./images/star-border.svg", alt="")
+                                            +rating-progress(50,10)
+                                        .product-reviews-rating-list-item
+                                            .rating-stars
+                                                img(src="./images/star-fill.svg", alt="")
+                                                img(src="./images/star-border.svg", alt="")
+                                                img(src="./images/star-border.svg", alt="")
+                                                img(src="./images/star-border.svg", alt="")
+                                                img(src="./images/star-border.svg", alt="")
+                                            +rating-progress(10,3)
+                                button.add-review Добавить отзыв 
+                                -for(var i=0;i<5;i++)
+                                    .product-reviews-item
+                                        .product-reviews-item-head
+                                            p Сергей Иванов
+                                            .rating-stars
+                                                img(src="./images/star-fill.svg", alt="")
+                                                img(src="./images/star-fill.svg", alt="")
+                                                img(src="./images/star-fill.svg", alt="")
+                                                img(src="./images/star-fill.svg", alt="")
+                                                img(src="./images/star-fill.svg", alt="")
+                                        .product-reviews-item-body
+                                            p Елка супер, нет слов, не ожидала такого качества)) Очень понравилось. Обслуживание отличное, хоть и не в сезон покупала, привезли, позвонили, я приехала и купила. Огромное спасибо)
+                                        .product-reviews-item-footer
+                                            span ИЮЛ 10, 2015
+                                            .reviews-action
+                                                img(src="./images/like.svg", alt="")
+                                                img(src="./images/dis.svg", alt="")
+                                                img(src="./images/answ.svg", alt="")
+                        .product-feedback-modal(id="add-review-modal")
+                            .product-feedback-modal-close
+                                img(src="./images/close.svg", alt="")
+                                span Ваш отзыв
+                            .product-feedback-modal-content
+                                .form-add-review
+                                    .evaluation
+                                        p Оценка:
+                                        .rating-stars
+                                            img(src="./images/star-fill.svg", alt="")
+                                            img(src="./images/star-fill.svg", alt="")
+                                            img(src="./images/star-fill.svg", alt="")
+                                            img(src="./images/star-fill.svg", alt="")
+                                            img(src="./images/star-fill.svg", alt="")
+                                    input(type="text" placeholder="Ваше имя").form-item
+                                    textarea(placeholder="Текст отзыва").form-item
+                                    button.add-review Добавить отзыв 
+                    .product-box.product-ask
+                        .product-box-title Хочешь елку выше?
+                        a(href="#").link Сосна Микс 220 см - 3150 грн.
+                    .product-box.product-description
+                        .product-description-item
+                            .product-description-item-img
+                                img(src="./images/desc-1.svg", alt="")
+                            .product-description-item-text   
+                                p Реалистичная
+                                p Хвоя как у живой ели
+                        .product-description-item
+                            .product-description-item-img
+                                img(src="./images/desc-2.svg", alt="")
+                            .product-description-item-text   
+                                p Практичная
+                                p Легко собирается и разбирается
+                        .product-description-item
+                            .product-description-item-img
+                                img(src="./images/desc-3.svg", alt="")
+                            .product-description-item-text   
+                                p Долговечная
+                                p Имеет надежный металлический каркас
+                        .product-description-item
+                            .product-description-item-img
+                                img(src="./images/desc-4.svg", alt="")
+                            .product-description-item-text   
+                                p Компактная
+                                p Состоит из нескольких частей
+                    .accordion-item
+                        .accordion-item-title
+                            span Доставка
+                            +icon("arrow")
+                        .accordion-item-content(style="display:none")
+                            ul.check-list
+                                li 
+                                    span Бесплатная доставка по Украине
+                                li 
+                                    span Оплата при получении без дополнительных комиссий
+                                li 
+                                    span Моноволокно (леска)
+                    .accordion-item
+                        .accordion-item-title
+                            span Оплата
+                            +icon("arrow")
+                        .accordion-item-content(style="display:none")
+                            ul.check-list
+                                li 
+                                    span Бесплатная доставка по Украине
+                                li 
+                                    span Оплата при получении без дополнительных комиссий
+                                li 
+                                    span Моноволокно (леска)
+                    .accordion-item
+                        .accordion-item-title
+                            span Гарантия
+                            +icon("arrow")
+                        .accordion-item-content(style="display:none")
+                            ul.check-list
+                                li 
+                                    span Бесплатная доставка по Украине
+                                li 
+                                    span Оплата при получении без дополнительных комиссий
+                                li 
+                                    span Моноволокно (леска)
+                    .product-box.product-cheaper
+                        .product-box-title Вместе дешевле
+                        .product-cheaper-formula    
+                            .formula-item
+                                img(src="./images/cheap-1.jpg", alt="")
+                            span +
+                            .formula-item
+                                img(src="./images/cheap-2.jpg", alt="")
+                            span 
+                                |=
+                            span -10%
+                        .product-cheaper-item
+                            .product-cheaper-item-img
+                                img(src="./images/cheap-2.jpg", alt="")
+                            .product-cheaper-item-info  
+                                p Набор шаров R150 24 шт
+                                p 3400 грн.
+                            button.product-cheaper-item-button Добавить
+                        .product-cheaper-item
+                            .product-cheaper-item-img
+                                img(src="./images/cheap-2.jpg", alt="")
+                            .product-cheaper-item-info  
+                                p Набор шаров R150 24 шт
+                                p 3400 грн.
+                            button.product-cheaper-item-button Добавить
+                    .product-box.product-reviews
+                        .product-reviews-head
+                            .title-3 Отзывы (9)
+                            .rating
+                                .rating-value 
+                                    span 3.0
+                                .rating-stars
+                                    img(src="./images/star-fill.svg", alt="")
+                                    img(src="./images/star-fill.svg", alt="")
+                                    img(src="./images/star-fill.svg", alt="")
+                                    img(src="./images/star-border.svg", alt="")
+                                    img(src="./images/star-border.svg", alt="")
+                        .product-reviews-list
+                            -for(var i=0;i<3;i++)
+                                .product-reviews-item
+                                    .product-reviews-item-head
+                                        p Сергей Иванов
+                                        .rating-stars
+                                            img(src="./images/star-fill.svg", alt="")
+                                            img(src="./images/star-fill.svg", alt="")
+                                            img(src="./images/star-fill.svg", alt="")
+                                            img(src="./images/star-fill.svg", alt="")
+                                            img(src="./images/star-fill.svg", alt="")
+                                    .product-reviews-item-body
+                                        p Елка супер, нет слов, не ожидала такого качества)) Очень понравилось. Обслуживание отличное, хоть и не в сезон покупала, привезли, позвонили, я приехала и купила. Огромное спасибо)
+                                    .product-reviews-item-footer
+                                        span ИЮЛ 10, 2015
+                                        .reviews-action
+                                            img(src="./images/like.svg", alt="")
+                                            img(src="./images/dis.svg", alt="")
+                                            img(src="./images/answ.svg", alt="")
+                        a(href="#").link Все отзывы
+                        button.add-review Добавить отзыв    
+                    .product-video
+                        .title-2 Видео
+                        .videowrapper
+                            <iframe src="https://www.youtube.com/embed/I5e70VILTSo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    .product-recommend
+                        .title-2 С этим товаром<br>так же покупают
+                        .product-slider
+                            .swiper-container
+                                .swiper-wrapper
+                                    each item in status
+                                        .swiper-slide
+                                            +product-card(item)
+                                .swiper-pagination
+                    .product-recommend
+                        .title-2 Товары той же высоты
+                        .product-slider
+                            .swiper-container
+                                .swiper-wrapper
+                                    each item in status
+                                        .swiper-slide
+                                            +product-card(item)
+                                .swiper-pagination
+                    .product-buttons
+                        .buy-click-form
+                            .buy-click-form-close
+                                img(src="./images/arrow-down.svg", alt="")
+                            input(type="text" placeholder="Ваш номер телефона").form-item
+                        
+                        form#buy_block.product-btn(action='#', method='post', data-ajax='false')
+                            // hidden datas
+                            p.hidden
+                                input(type='hidden', name='token', value='')
+                                input#product_page_product_id(type='hidden', name='id_product', value='')
+                                input(type='hidden', name='add', value='1')
+                                input#idCombination(type='hidden', name='id_product_attribute', value='')
+                            #add_to_cart
+                                button#Submit.btn-cart.add-to-cart(type='submit', data-theme='e', name='Submit', value='submit-value') 
+                                    img(src="./images/basket.svg", alt="")
+                                    span в корзину
+                        button.product-btn.buy-click 
+                            span Купить в 1 клик
+        +footer
+        include ./_scripts 
+        script(src="./js/product.js")
+        script(src="./js/main.js")
+          

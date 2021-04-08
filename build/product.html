@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>rizdvo </title>
+    <!-- для галереи-->
+    <link rel="stylesheet" href="./css/jquery.fancybox.min.css"/>
+    <!-- для фильтра-->
+    <link rel="stylesheet" href="./css/jquery-ui.min.css"/>
+    <!-- для слайдера-->
+    <link rel="stylesheet" href="./css/swiper.min.css"/>
+    <!-- custom css-->
+    <link rel="stylesheet" href="./css/style.css"/>
+  </head>
+  <body class="product-page" id="product-page">
+    <!-- mixin header-->
+    <header class="header type-2">
+      <div class="container">
+        <div class="header-main">
+          <button class="menu-btn" id="menu-btn">
+            <div class="burger"></div>
+          </button><a class="btn-back" href="category.html"><img src="./images/back.svg" alt=""/></a>
+          <div class="header-logo">   <img src="./images/logo.svg" alt=""/></div>
+          <div class="header-breadcrumbs">
+            <ul class="breadcrumbs">
+              <li class="breadcrumbs-item"> <a href="index.html">Фабрика Риздво</a></li>
+              <li class="breadcrumbs-item"> <a href="catalog.html">Елки</a></li>
+              <li class="breadcrumbs-item current"> <span>Люкс</span></li>
+            </ul>
+          </div>
+          <div id="cart_block"><a href="#" title="Корзина" rel="nofollow"> <img src="./images/basket.svg" alt=""/></a>
+            <div class="block_content">
+              <!-- Если есть товар в корзине-->
+              <div id="cart_block_summary"><span class="ajax_cart_quantity">5</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="header-bottom"><a href="#"> <img src="./images/call.svg" alt=""/><span>+38 (098) 261 17 33</span></a></div>
+      </div>
+    </header>
+    <!-- / mixin header -->
+    <main>
+      <section class="product">
+        <div class="product-gallery-slider">
+          <div class="swiper-container">
+            <div class="swiper-wrapper"><a class="swiper-slide" href="https://images.ua.prom.st/116207996_w640_h640_elka-iskusstvennaya-kedr.jpg" data-fancybox="images"><img src="./images/prod-img.jpg" alt=""/></a><a class="swiper-slide" href="https://images.ua.prom.st/116207996_w640_h640_elka-iskusstvennaya-kedr.jpg" data-fancybox="images"><img src="./images/prod-img.jpg" alt=""/></a></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="product-box product-main">
+            <div class="product-main-top">
+              <div class="product-main-top-left">
+                <div class="product-price">2 200 грн.</div>
+                <div class="product-oldprice">2 800 грн.</div>
+                <div class="product-status status-green">Есть на складе</div>
+              </div>
+              <div class="product-main-top-right">
+                <div class="sale-title">До конца акции:</div>
+                <div class="product-countdown" data-countdown="2020/11/13"></div>
+              </div>
+            </div>
+            <div class="product-main-info">
+              <div class="title-2">Сосна Микс 180</div>
+              <p>Насыщенные оттенки зеленого – именно так можно охарактеризовать сосну «Микс». Дизайнеры, создавая ее эскиз, смешали несколько оттенков, и в итоге мы получили это стильное дерево. Хвоя сосны жесткая, напоминающая “ершик” для мытья...</p>
+              <div class="title-3">Характеристики</div>
+              <ul class="product-properties">
+                <li> <span>Высота</span><span>25-300 см.</span></li>
+                <li> <span>Цвет</span><span>Зеленый</span></li>
+                <li> <span>Диаметр хвои</span><span>5-7 см.</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="product-box product-feedback">
+            <div class="rating">
+              <div class="rating-value"> <span>3.0</span></div>
+              <div class="rating-stars"><img src="./images/star-fill.svg" alt=""/><img src="./images/star-fill.svg" alt=""/><img src="./images/star-fill.svg" alt=""/><img src="./images/star-border.svg" alt=""/><img src="./images/star-border.svg" alt=""/></div>
+            </div><a class="link" href="javascript:;" id="show-reviews-modal">Отзывы и вопросы</a>
+            <div class="product-feedback-modal" id="all-reviews-modal">
+              <div class="product-feedback-modal-close"><img src="./images/close.svg" alt=""/><span>Отзывы</span></div>
+              <div class="product-feedback-modal-content">
+                <div class="product-reviews-rating">
+                  <div class="product-reviews-rating-main">
+                    <p>3.0 <span>/ 5</span></p>
+                    <div class="rating-stars"><img src="./images/star-fill.svg" alt=""/><img src="./images/star-fill.svg" alt=""/><img src="./images/star-fill.svg" alt=""/><img src="./images/star-border.svg" alt=""/><img src="./images/star-border.svg" alt=""/></div>
+                    <div class="reviews-value">45 оценок</div>
+                  </div>
+                  <div class="product-reviews-rating-list">
+                    <div class="product-reviews-rating-list-item">
+                      <div class="rating-stars"><img src="./images/star-fill.svg" alt=""/><img src="./images/star-fill.svg" alt=""/><img src="./images/star-fill.svg" alt=""/><img src="./images/star-fill.svg" alt=""/><img src="./images/star-fill.svg" alt=""/></div>
+                      <div class="rating-progress">
+                        <div class="rating-progress-bar">
+                          <div class="rating-progress-bar-inner" style="width:20%"></div>
+                        </div>
+                        <div class="rating-progress-value">3</div>
+                      </div>
+                    </div>
+                    <div class="product-reviews-rating-list-item">
+                      <div class="rating-stars"><img src="./images/star-fill.svg" alt=""/><img src="./images/star-fill.svg" alt=""/><img src="./images/star-fill.svg" alt=""/><img src="./images/star-fill.svg" alt=""/><img src="./images/star-border.svg" alt=""/></div>
+                      <div class="rating-progress">
+                        <div class="rating-progress-bar">
+                          <div class="rating-progress-bar-inner" style="width:30%"></div>
+                        </div>
+                        <div class="rating-progress-value">5</div>
+                      </div>
+                    </div>
+                    <div class="product-reviews-rating-list-item">
+                      <div class="rating-stars"><img src="./images/star-fill.svg" alt=""/><img src="./images/star-fill.svg" alt=""/><img src="./images/star-fill.svg" alt=""/><img src="./images/star-border.svg" alt=""/><img src="./images/star-border.svg" alt=""/></div>
+                      <div class="rating-progress">
+                        <div class="rating-progress-bar">
+                          <div class="rating-progress-bar-inner" style="width:90%"></div>
+                        </div>
+                        <div class="rating-progress-value">34</div>
+                      </div>
+                    </div>
+                    <div class="product-reviews-rating-list-item">
+                      <div class="rating-stars"><img src="./images/star-fill.svg" alt=""/><img src="./images/star-fill.svg" alt=""/><img src="./images/star-border.svg" alt=""/><img src="./images/star-border.svg" alt=""/><img src="./images/star-border.svg" alt=""/></div>
+                      <div class="rating-progress">
+                        <div class="rating-progress-bar">
+                          <div class="rating-progress-bar-inner" style="width:50%"></div>
+                        </div>
+                        <div class="rating-progress-value">10</div>
+                      </div>
+                    </div>
+                    <div class="product-reviews-rating-list-item">
+                      <div class="rating-stars"><img src="./images/star-fill.svg" alt=""/><img src="./images/star-border.svg" alt=""/><img src="./images/star-border.svg" alt=""/><img src="./images/star-border.svg" alt=""/><img src="./images/star-border.svg" alt=""/></div>
+                      <div class="rating-progress">
+                        <div class="rating-progress-bar">
+                          <div class="rating-progress-bar-inner" style="width:10%"></div>
+                        </div>
+                        <div class="rating-progress-value">3</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="add-review">Добавить отзыв </button>
+                <div class="product-reviews-item">
+                  <div class="product-reviews-item-head">
+                    <p>Сергей Иванов</p>
+                    <div class="rating-stars"><img src="./images/star-fill.svg" alt=""/><img src="./images/star-fill.svg" alt=""/><img src="./images/star-fill.svg" alt=""/><img src="./images/star-fill.svg" alt=""/><img src="./images/star-fill.svg" alt=""/></div>
+                  </div>
+                  <div class="product-reviews-item-body">
+                    <p>Елка супер, нет слов, не ожидала такого качества)) Очень понравилось. Обслуживание отличное, хоть и не в сезон покупала, привезли, позвонили, я приехала и купила. Огромное спасибо)</p>
+                  </div>
+                  <div class="product-reviews-item-footer"><span>ИЮЛ 10, 2015</span>
+                    <div class="reviews-action"><img src="./images/like.svg" alt=""/><img src="./images/dis.svg" alt=""/><img src="./images/answ.svg" alt=""/></div>
+                  </div>
+                </div>
+                <div class="product-reviews-item">
+                  <div class="product-reviews-item-head">
+                    <p>Сергей Иванов</p>
+                    <div class="rating-stars"><img src="./images/star-fill.svg" alt=""/><img src="./images/star-fill.svg" alt=""/><img src="./images/star-fill.svg" alt=""/><img src="./images/star-fill.svg" alt=""/><img src="./images/star-fill.svg" alt=""/></div>
+                  </div>
+                  <div class="product-reviews-item-body">
+                    <p>Елка супер, нет слов, не ожидала такого качества)) Очень понравилось. Обслуживание отличное, хоть и не в сезон покупала, привезли, позвонили, я приехала и купила. Огромное спасибо)</p>
+                  </div>
+                  <div class="product-reviews-item-footer"><span>ИЮЛ 10, 2015</span>
+                    <div class="reviews-action"><img src="./images/like.svg" alt=""/><img src="./images/dis.svg" alt=""/><img src="./images/answ.svg" alt=""/></div>
+                  </div>
+                </div>
+                <div class="product-reviews-item">
+                  <div class="product-reviews-item-head">
+                    <p>Сергей Иванов</p>
+                    <div class="rating-stars"><img src="./images/star-fill.svg" alt=""/><img src="./images/star-fill.svg" alt=""/><img src="./images/star-fill.svg" alt=""/><img src="./images/star-fill.svg" alt=""/><img src="./images/star-fill.svg" alt=""/></div>
+                  </div>
+                  <div class="product-reviews-item-body">
+                    <p>Елка супер, нет слов, не ожидала такого качества)) Очень понравилось. Обслуживание отличное, хоть и не в сезон покупала, привезли, позвонили, я приехала и купила. Огромное спасибо)</p>
+                  </div>
+                  <div class="product-reviews-item-footer"><span>ИЮЛ 10, 2015</span>
+                    <div class="reviews-action"><img src="./images/like.svg" alt=""/><img src="./images/dis.svg" alt=""/><img src="./images/answ.svg" alt=""/></div>
+                  </div>
+                </div>
+                <div class="product-reviews-item">
+                  <div class="product-reviews-item-head">
+                    <p>Сергей Иванов</p>
+                    <div class="rating-stars"><img src="./images/star-fill.svg" alt=""/><img src="./images/star-fill.svg" alt=""/><img src="./images/star-fill.svg" alt=""/><img src="./images/star-fill.svg" alt=""/><img src="./images/star-fill.svg" alt=""/></div>
+                  </div>
+                  <div class="product-reviews-item-body">
+                    <p>Елка супер, нет слов, не ожидала такого качества)) Очень понравилось. Обслуживание отличное, хоть и не в сезон покупала, привезли, позвонили, я приехала и купила. Огромное спасибо)</p>
+                  </div>
+                  <div class="product-reviews-item-footer"><span>ИЮЛ 10, 2015</span>
+                    <div class="reviews-action"><img src="./images/like.svg" alt=""/><img src="./images/dis.svg" alt=""/><img src="./images/answ.svg" alt=""/></div>
+                  </div>
+                </div>
+                <div class="product-reviews-item">
+                  <div class="product-reviews-item-head">
+                    <p>Сергей Иванов</p>
+                    <div class="rating-stars"><img src="./images/star-fill.svg" alt=""/><img src="./images/star-fill.svg" alt=""/><img src="./images/star-fill.svg" alt=""/><img src="./images/star-fill.svg" alt=""/><img src="./images/star-fill.svg" alt=""/></div>
+                  </div>
+                  <div class="product-reviews-item-body">
+                    <p>Елка супер, нет слов, не ожидала такого качества)) Очень понравилось. Обслуживание отличное, хоть и не в сезон покупала, привезли, позвонили, я приехала и купила. Огромное спасибо)</p>
+                  </div>
+                  <div class="product-reviews-item-footer"><span>ИЮЛ 10, 2015</span>
+                    <div class="reviews-action"><img src="./images/like.svg" alt=""/><img src="./images/dis.svg" alt=""/><img src="./images/answ.svg" alt=""/></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-feedback-modal" id="add-review-modal">
+              <div class="product-feedback-modal-close"><img src="./images/close.svg" alt=""/><span>Ваш отзыв</span></div>
+              <div class="product-feedback-modal-content">
+                <div class="form-add-review">
+                  <div class="evaluation">
+                    <p>Оценка:</p>
+                    <div class="rating-stars"><img src="./images/star-fill.svg" alt=""/><img src="./images/star-fill.svg" alt=""/><img src="./images/star-fill.svg" alt=""/><img src="./images/star-fill.svg" alt=""/><img src="./images/star-fill.svg" alt=""/></div>
+                  </div>
+                  <input class="form-item" type="text" placeholder="Ваше имя"/>
+                  <textarea class="form-item" placeholder="Текст отзыва"></textarea>
+                  <button class="add-review">Добавить отзыв </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product-box product-ask">
+            <div class="product-box-title">Хочешь елку выше?</div><a class="link" href="#">Сосна Микс 220 см - 3150 грн.</a>
+          </div>
+          <div class="product-box product-description">
+            <div class="product-description-item">
+              <div class="product-description-item-img"><img src="./images/desc-1.svg" alt=""/></div>
+              <div class="product-description-item-text">  
+                <p>Реалистичная</p>
+                <p>Хвоя как у живой ели</p>
+              </div>
+            </div>
+            <div class="product-description-item">
+              <div class="product-description-item-img"><img src="./images/desc-2.svg" alt=""/></div>
+              <div class="product-description-item-text">  
+                <p>Практичная</p>
+                <p>Легко собирается и разбирается</p>
+              </div>
+            </div>
+            <div class="product-description-item">
+              <div class="product-description-item-img"><img src="./images/desc-3.svg" alt=""/></div>
+              <div class="product-description-item-text">  
+                <p>Долговечная</p>
+                <p>Имеет надежный металлический каркас</p>
+              </div>
+            </div>
+            <div class="product-description-item">
+              <div class="product-description-item-img"><img src="./images/desc-4.svg" alt=""/></div>
+              <div class="product-description-item-text">  
+                <p>Компактная</p>
+                <p>Состоит из нескольких частей</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-item-title"><span>Доставка</span>
+              <svg class="icon icon-arrow ">
+                <use xlink:href="./images/sprite-inline.svg#arrow"></use>
+              </svg>
+            </div>
+            <div class="accordion-item-content" style="display:none">
+              <ul class="check-list">
+                <li> <span>Бесплатная доставка по Украине</span></li>
+                <li> <span>Оплата при получении без дополнительных комиссий</span></li>
+                <li> <span>Моноволокно (леска)</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-item-title"><span>Оплата</span>
+              <svg class="icon icon-arrow ">
+                <use xlink:href="./images/sprite-inline.svg#arrow"></use>
+              </svg>
+            </div>
+            <div class="accordion-item-content" style="display:none">
+              <ul class="check-list">
+                <li> <span>Бесплатная доставка по Украине</span></li>
+                <li> <span>Оплата при получении без дополнительных комиссий</span></li>
+                <li> <span>Моноволокно (леска)</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-item-title"><span>Гарантия</span>
+              <svg class="icon icon-arrow ">
+                <use xlink:href="./images/sprite-inline.svg#arrow"></use>
+              </svg>
+            </div>
+            <div class="accordion-item-content" style="display:none">
+              <ul class="check-list">
+                <li> <span>Бесплатная доставка по Украине</span></li>
+                <li> <span>Оплата при получении без дополнительных комиссий</span></li>
+                <li> <span>Моноволокно (леска)</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="product-box product-cheaper">
+            <div class="product-box-title">Вместе дешевле</div>
+            <div class="product-cheaper-formula">   
+              <div class="formula-item"><img src="./images/cheap-1.jpg" alt=""/></div><span>+</span>
+              <div class="formula-item"><img src="./images/cheap-2.jpg" alt=""/></div><span>
+                 =</span><span>-10%</span>
+            </div>
+            <div class="product-cheaper-item">
+              <div class="product-cheaper-item-img"><img src="./images/cheap-2.jpg" alt=""/></div>
+              <div class="product-cheaper-item-info"> 
+                <p>Набор шаров R150 24 шт</p>
+                <p>3400 грн.</p>
+              </div>
+              <button class="product-cheaper-item-button">Добавить</button>
+            </div>
+            <div class="product-cheaper-item">
+              <div class="product-cheaper-item-img"><img src="./images/cheap-2.jpg" alt=""/></div>
+              <div class="product-cheaper-item-info"> 
+                <p>Набор шаров R150 24 шт</p>
+                <p>3400 грн.</p>
+              </div>
+              <button class="product-cheaper-item-button">Добавить</button>
+            </div>
+          </div>
+          <div class="product-box product-reviews">
+            <div class="product-reviews-head">
+              <div class="title-3">Отзывы (9)</div>
+              <div class="rating">
+                <div class="rating-value"> <span>3.0</span></div>
+                <div class="rating-stars"><img src="./images/star-fill.svg" alt=""/><img src="./images/star-fill.svg" alt=""/><img src="./images/star-fill.svg" alt=""/><img src="./images/star-border.svg" alt=""/><img src="./images/star-border.svg" alt=""/></div>
+              </div>
+            </div>
+            <div class="product-reviews-list">
+              <div class="product-reviews-item">
+                <div class="product-reviews-item-head">
+                  <p>Сергей Иванов</p>
+                  <div class="rating-stars"><img src="./images/star-fill.svg" alt=""/><img src="./images/star-fill.svg" alt=""/><img src="./images/star-fill.svg" alt=""/><img src="./images/star-fill.svg" alt=""/><img src="./images/star-fill.svg" alt=""/></div>
+                </div>
+                <div class="product-reviews-item-body">
+                  <p>Елка супер, нет слов, не ожидала такого качества)) Очень понравилось. Обслуживание отличное, хоть и не в сезон покупала, привезли, позвонили, я приехала и купила. Огромное спасибо)</p>
+                </div>
+                <div class="product-reviews-item-footer"><span>ИЮЛ 10, 2015</span>
+                  <div class="reviews-action"><img src="./images/like.svg" alt=""/><img src="./images/dis.svg" alt=""/><img src="./images/answ.svg" alt=""/></div>
+                </div>
+              </div>
+              <div class="product-reviews-item">
+                <div class="product-reviews-item-head">
+                  <p>Сергей Иванов</p>
+                  <div class="rating-stars"><img src="./images/star-fill.svg" alt=""/><img src="./images/star-fill.svg" alt=""/><img src="./images/star-fill.svg" alt=""/><img src="./images/star-fill.svg" alt=""/><img src="./images/star-fill.svg" alt=""/></div>
+                </div>
+                <div class="product-reviews-item-body">
+                  <p>Елка супер, нет слов, не ожидала такого качества)) Очень понравилось. Обслуживание отличное, хоть и не в сезон покупала, привезли, позвонили, я приехала и купила. Огромное спасибо)</p>
+                </div>
+                <div class="product-reviews-item-footer"><span>ИЮЛ 10, 2015</span>
+                  <div class="reviews-action"><img src="./images/like.svg" alt=""/><img src="./images/dis.svg" alt=""/><img src="./images/answ.svg" alt=""/></div>
+                </div>
+              </div>
+              <div class="product-reviews-item">
+                <div class="product-reviews-item-head">
+                  <p>Сергей Иванов</p>
+                  <div class="rating-stars"><img src="./images/star-fill.svg" alt=""/><img src="./images/star-fill.svg" alt=""/><img src="./images/star-fill.svg" alt=""/><img src="./images/star-fill.svg" alt=""/><img src="./images/star-fill.svg" alt=""/></div>
+                </div>
+                <div class="product-reviews-item-body">
+                  <p>Елка супер, нет слов, не ожидала такого качества)) Очень понравилось. Обслуживание отличное, хоть и не в сезон покупала, привезли, позвонили, я приехала и купила. Огромное спасибо)</p>
+                </div>
+                <div class="product-reviews-item-footer"><span>ИЮЛ 10, 2015</span>
+                  <div class="reviews-action"><img src="./images/like.svg" alt=""/><img src="./images/dis.svg" alt=""/><img src="./images/answ.svg" alt=""/></div>
+                </div>
+              </div>
+            </div><a class="link" href="#">Все отзывы</a>
+            <button class="add-review">Добавить отзыв    </button>
+          </div>
+          <div class="product-video">
+            <div class="title-2">Видео</div>
+            <div class="videowrapper"><iframe src="https://www.youtube.com/embed/I5e70VILTSo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+          </div>
+          <div class="product-recommend">
+            <div class="title-2">С этим товаром<br>так же покупают</div>
+            <div class="product-slider">
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="product-card"><a class="product-card-img" href="product.html"><img src="./images/product.png" alt=""/></a><a class="product-card-name" href="product.html">Елка Литая Люкс 180</a>
+                      <div class="product-card-footer">
+                        <div class="product-card-footer-left">
+                          <div class="product-price">3400 грн.</div>
+                          <div class="product-status status-green">Есть на складе</div>
+                        </div>
+                        <div class="product-card-footer-right"><a class="btn-add-to-cart ajax_add_to_cart_button" href="#"><img src="./images/basket.svg" alt=""/></a></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="product-card"><a class="product-card-img" href="product.html"><img src="./images/product.png" alt=""/></a><a class="product-card-name" href="product.html">Елка Литая Люкс 180</a>
+                      <div class="product-card-footer">
+                        <div class="product-card-footer-left">
+                          <div class="product-price">3400 грн.</div>
+                          <div class="product-status status-red">Нет на складе</div>
+                        </div>
+                        <div class="product-card-footer-right"><a class="btn-add-to-cart ajax_add_to_cart_button" href="#"><img src="./images/basket.svg" alt=""/></a></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="product-card"><a class="product-card-img" href="product.html"><img src="./images/product.png" alt=""/></a><a class="product-card-name" href="product.html">Елка Литая Люкс 180</a>
+                      <div class="product-card-footer">
+                        <div class="product-card-footer-left">
+                          <div class="product-price">3400 грн.</div>
+                          <div class="product-status status-yellow">Под заказ</div>
+                        </div>
+                        <div class="product-card-footer-right"><a class="btn-add-to-cart ajax_add_to_cart_button" href="#"><img src="./images/basket.svg" alt=""/></a></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="product-card"><a class="product-card-img" href="product.html"><img src="./images/product.png" alt=""/></a><a class="product-card-name" href="product.html">Елка Литая Люкс 180</a>
+                      <div class="product-card-footer">
+                        <div class="product-card-footer-left">
+                          <div class="product-price">3400 грн.</div>
+                          <div class="product-status status-grey">Снят с производства</div>
+                        </div>
+                        <div class="product-card-footer-right"><a class="btn-add-to-cart ajax_add_to_cart_button" href="#"><img src="./images/basket.svg" alt=""/></a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+          <div class="product-recommend">
+            <div class="title-2">Товары той же высоты</div>
+            <div class="product-slider">
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="product-card"><a class="product-card-img" href="product.html"><img src="./images/product.png" alt=""/></a><a class="product-card-name" href="product.html">Елка Литая Люкс 180</a>
+                      <div class="product-card-footer">
+                        <div class="product-card-footer-left">
+                          <div class="product-price">3400 грн.</div>
+                          <div class="product-status status-green">Есть на складе</div>
+                        </div>
+                        <div class="product-card-footer-right"><a class="btn-add-to-cart ajax_add_to_cart_button" href="#"><img src="./images/basket.svg" alt=""/></a></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="product-card"><a class="product-card-img" href="product.html"><img src="./images/product.png" alt=""/></a><a class="product-card-name" href="product.html">Елка Литая Люкс 180</a>
+                      <div class="product-card-footer">
+                        <div class="product-card-footer-left">
+                          <div class="product-price">3400 грн.</div>
+                          <div class="product-status status-red">Нет на складе</div>
+                        </div>
+                        <div class="product-card-footer-right"><a class="btn-add-to-cart ajax_add_to_cart_button" href="#"><img src="./images/basket.svg" alt=""/></a></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="product-card"><a class="product-card-img" href="product.html"><img src="./images/product.png" alt=""/></a><a class="product-card-name" href="product.html">Елка Литая Люкс 180</a>
+                      <div class="product-card-footer">
+                        <div class="product-card-footer-left">
+                          <div class="product-price">3400 грн.</div>
+                          <div class="product-status status-yellow">Под заказ</div>
+                        </div>
+                        <div class="product-card-footer-right"><a class="btn-add-to-cart ajax_add_to_cart_button" href="#"><img src="./images/basket.svg" alt=""/></a></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="product-card"><a class="product-card-img" href="product.html"><img src="./images/product.png" alt=""/></a><a class="product-card-name" href="product.html">Елка Литая Люкс 180</a>
+                      <div class="product-card-footer">
+                        <div class="product-card-footer-left">
+                          <div class="product-price">3400 грн.</div>
+                          <div class="product-status status-grey">Снят с производства</div>
+                        </div>
+                        <div class="product-card-footer-right"><a class="btn-add-to-cart ajax_add_to_cart_button" href="#"><img src="./images/basket.svg" alt=""/></a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+          <div class="product-buttons">
+            <div class="buy-click-form">
+              <div class="buy-click-form-close"><img src="./images/arrow-down.svg" alt=""/></div>
+              <input class="form-item" type="text" placeholder="Ваш номер телефона"/>
+            </div>
+            <form class="product-btn" id="buy_block" action="#" method="post" data-ajax="false">
+              <!-- hidden datas-->
+              <p class="hidden">
+                <input type="hidden" name="token" value=""/>
+                <input id="product_page_product_id" type="hidden" name="id_product" value=""/>
+                <input type="hidden" name="add" value="1"/>
+                <input id="idCombination" type="hidden" name="id_product_attribute" value=""/>
+              </p>
+              <div id="add_to_cart">
+                <button class="btn-cart add-to-cart" id="Submit" type="submit" data-theme="e" name="Submit" value="submit-value"> <img src="./images/basket.svg" alt=""/><span>в корзину</span></button>
+              </div>
+            </form>
+            <button class="product-btn buy-click"> <span>Купить в 1 клик</span></button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- mixin footer-->
+    <footer class="footer">
+      <div class="subscribe">
+        <div class="title-2">Подпишись на Акции</div>
+        <div class="container">
+          <div class="subscribe-form">   
+            <input class="subscribe-form-input" placeholder="Введите Email"/>
+          </div>
+        </div>
+        <div class="subscribe-social"><a href="#"><img src="./images/social-3.svg" alt=""/></a><a href="#"><img src="./images/social-2.svg" alt=""/></a><a href="#"><img src="./images/social-1.svg" alt=""/></a></div>
+      </div>
+      <div class="help">
+        <div class="container">
+          <div class="accordion-item accordion-item--red">
+            <div class="accordion-item-title"><span>Условия</span>
+              <svg class="icon icon-arrow ">
+                <use xlink:href="./images/sprite-inline.svg#arrow"></use>
+              </svg>
+            </div>
+            <div class="accordion-item-content" style="display:none">
+              <ul> 
+                <li><a href="#">Оптовикам</a></li>
+                <li><a href="#">Дропшиппинг</a></li>
+                <li><a href="#">Статьи и обзоры</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="accordion-item accordion-item--red">
+            <div class="accordion-item-title"><span>Помощь</span>
+              <svg class="icon icon-arrow ">
+                <use xlink:href="./images/sprite-inline.svg#arrow"></use>
+              </svg>
+            </div>
+            <div class="accordion-item-content" style="display:none">
+              <ul> 
+                <li><a href="#">Оптовикам</a></li>
+                <li><a href="#">Дропшиппинг</a></li>
+                <li><a href="#">Статьи и обзоры</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="accordion-item accordion-item--red">
+            <div class="accordion-item-title"><span>Сотрудничесто</span>
+              <svg class="icon icon-arrow ">
+                <use xlink:href="./images/sprite-inline.svg#arrow"></use>
+              </svg>
+            </div>
+            <div class="accordion-item-content" style="display:none">
+              <ul> 
+                <li><a href="#">Оптовикам</a></li>
+                <li><a href="#">Дропшиппинг</a></li>
+                <li><a href="#">Статьи и обзоры</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact">
+        <div class="container">
+          <div class="contact-title">Контакты</div>
+          <div class="contact-item">
+            <div class="contact-item-icon"><img src="./images/clock.svg" alt=""/></div>
+            <div class="contact-item-text">
+              <p>Пн - Пт: с 9:00 до 18:00 </p>
+              <p>СБ - Вс: выходной</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon"><img src="./images/mail.svg" alt=""/></div>
+            <div class="contact-item-text">
+              <p> <a href="mailto:info@rizdvo.ua">info@rizdvo.ua</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon"><img src="./images/place.svg" alt=""/></div>
+            <div class="contact-item-text">
+              <p>Днепр,<br>пр. Слобожанський, 29, оф. 701</p>
+            </div>
+          </div>
+          <div class="copyright">
+            <p>© 2019 Все права защищены</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- / mixin footer -->
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <!-- для меню и фильтра-->
+    <script src="./js/gsap.min.js"></script>
+    <!-- для слайдера-->
+    <script src="./js/swiper.min.js"></script>
+    <!-- для таймера-->
+    <script src="./js/jquery.countdown.min.js"></script>
+    <!-- для фильтра где цена-->
+    <script src="./js/jquery-ui.min.js"></script>
+    <script src="./js/jquery.ui.touch-punch.min.js"></script>
+    <!-- для галереи-->
+    <script src="./js/jquery.fancybox.min.js"></script>
+    <!-- Custom js-->
+    <script src="./js/product.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

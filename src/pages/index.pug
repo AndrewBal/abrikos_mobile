@@ -1,0 +1,79 @@
+include ./_mixins
+include ./_data
+
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        +metahead
+        title rizdvo 
+        include ./_styles    
+
+    body(id="index-page").index-page
+        +header
+
+        main
+            section.section-main
+                .section-main-slider    
+                    .swiper-container
+                        .swiper-wrapper
+                            -for(var i=0;i<3;i++)
+                                .swiper-slide(style="background-image:url(./images/slider-img.jpg)")
+                                    .title-1 Большая <br>Распродажа 
+                                    p Успей купить <br>по сниженной цене
+                    .section-main-timer
+                        .section-main-timer-title 
+                            p Осталось:
+                        .homepage-slider__countdown(data-countdown="2020/11/13")
+            section.section-tree-category
+                .container  
+                    .title-2 Категории Елок
+                    .row
+                        each item in treesCategories
+                            a(href="#").tree-card
+                                .tree-card-img
+                                    img(src="./images/categ-img.png", alt="")
+                                .tree-card-name=item
+                                ul.tree-card-properties
+                                    li 
+                                        span Высота
+                                        span 25-300 см.
+                                    li 
+                                        span Цвет
+                                        span Зеленый
+                                    li 
+                                        span Диаметр хвои
+                                        span 5-7 см.
+            section.section-select-tree
+                .container  
+                    p.title-2 Выбирайте Елочку
+                    +accordion-item("По материалу",material)
+                    +accordion-item("По материалу",material)
+                    +accordion-item("По высоте",height)
+                    +accordion-item("По цвету",color)
+            section.section-accessories-category
+                .container  
+                    .title-2 Аксессуары
+                    .row
+                        each item in accessoriesCategories
+                            a(href="#").accessory-card
+                                .accessory-card-img
+                                    img(src=item.img, alt="")
+                                .accessory-card-name=item.name
+            section.section-about
+                .container  
+                    .title-2 О нашем магазине
+                    .videowrapper
+                        <iframe src="https://www.youtube.com/embed/I5e70VILTSo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    .title-3 Почему стоит купить искусственную елку в интернет-магазине Фабрика Рiздво
+                    p В преддверие Нового года и дети, и взрослые с нетерпением ждут момента, когда можно наряжать елку. Именно с ней приходит ощущение этого веселого зимнего праздника. Сейчас искусственные ели являются достойной заменой своим живым прототипам, благодаря таким преимуществам:
+                    button.btn-read-more Читать далее
+        +menu
+        +footer
+        include ./_scripts 
+        script(src="./js/menu.js")
+        script(src="./js/main-slider.js")
+        script(src="./js/main.js")
+          

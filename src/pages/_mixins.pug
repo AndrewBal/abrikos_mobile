@@ -1,0 +1,269 @@
+include ./_data
+
+//- ================================= basic ======================================
+
+mixin metahead
+    meta(name="format-detection" content="telephone=no")
+    meta(name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no")
+//- mixin svg(name)
+//-     svg(class=`${name}`)
+//-         use(href=`./images/sprite-inline.svg#${name}`)
+
+mixin icon(name,mod)
+    - mod = mod || ''
+    svg(class="icon icon-" + name + ' ' + mod)
+        use(xlink:href="./images/sprite-inline.svg#" + name)
+
+//- +icon('arr_round','red_mod')
+
+//- ================================= basic ======================================
+
+
+
+//- === header === 
+mixin header(mod="")
+    // mixin header
+    header.header(class=mod)
+        .container
+            .header-main
+                button.menu-btn(id="menu-btn")
+                    .burger
+                a(href="category.html").btn-back
+                    img(src="./images/back.svg", alt="")
+                .header-logo    
+                    img(src="./images/logo.svg", alt="")
+                .header-breadcrumbs
+                    ul.breadcrumbs
+                        li.breadcrumbs-item 
+                            a(href="index.html") Фабрика Риздво
+                        li.breadcrumbs-item 
+                            a(href="catalog.html") Елки
+                        li.breadcrumbs-item.current 
+                            span Люкс
+                #cart_block
+                    a(href='#', title='Корзина', rel='nofollow') 
+                        img(src="./images/basket.svg", alt="")
+                    .block_content
+                        // Если есть товар в корзине
+                        #cart_block_summary
+                            span.ajax_cart_quantity 5
+            .header-bottom
+                a(href="#") 
+                    img(src="./images/call.svg", alt="")
+                    span +38 (098) 261 17 33
+
+
+
+    // / mixin header 
+//- === /header ===
+
+mixin accordion-item(name,list,mod="")
+    if mod=="red"
+        -mod ="accordion-item--red"
+    .accordion-item(class=mod)
+        .accordion-item-title
+            span=name
+            +icon("arrow")
+        .accordion-item-content(style="display:none")
+            ul  
+                each item in list
+                    li
+                        a(href="#")= item
+
+//- === form-checkbox ===
+mixin checkbox(text,id="test")
+    .checkbox
+        label(for=id)
+            span.checkbox-name !{text}
+            input(type="checkbox", id=id)
+            span.checkmark
+//- === / form-checkbox ===
+
+//- === form-group ===
+mixin form-group(id,name,type="text",placeholder="")
+    .form-group
+        label(for= id)= name
+        input(type= type, id= id, placeholder= placeholder).form-control
+//- === / form-group ===
+
+mixin breadcrumbs(data)
+    // mixin breadcrumbs 
+    section.breadcrumbs-section
+        .container
+            ul.breadcrumbs
+                each item,index in data
+                    li.breadcrumbs-item 
+                        a(href=item.href)=item.name
+
+mixin product-card(item)
+    .product-card
+        a(href="product.html").product-card-img
+            img(src="./images/product.png", alt="")
+        a(href="product.html").product-card-name Елка Литая Люкс 180
+        .product-card-footer
+            .product-card-footer-left
+                .product-price 3400 грн.
+                .product-status(class=`status-${item.color}`)=item.text
+            .product-card-footer-right
+                a(href="#").btn-add-to-cart.ajax_add_to_cart_button
+                    img(src="./images/basket.svg", alt="")
+
+mixin rating-progress(width,value)
+    .rating-progress
+        .rating-progress-bar
+            .rating-progress-bar-inner(style=`width:${width}%`)
+        .rating-progress-value=value
+
+mixin filter
+    .filter-menu.menu(id="filter-menu")
+        .menu-content
+            .menu-content-head(id="filter-menu-close")
+                span Фильтр
+                .menu-close
+                    img(src="./images/close.svg", alt="")
+            .menu-content-body
+                .filter-list
+                    .filter-group
+                        .filter-group-title Высота
+                        each item,i in height
+                            .filter-group-item
+                                .checkbox
+                                    label(for=i+10)
+                                        span.checkbox-name=item
+                                        input(id=i+10 type='checkbox')
+                                        span.checkmark
+                    .filter-group
+                        .filter-group-title Цвет
+                        each item,i in color
+                            .filter-group-item
+                                .checkbox
+                                    label(for=i+100)
+                                        span.checkbox-name=item
+                                        input(id=i+100 type='checkbox')
+                                        span.checkmark
+                    .filter-group
+                        .filter-group-title Материал
+                        each item,i in material
+                            .filter-group-item
+                                .checkbox
+                                    label(for=i+1000)
+                                        span.checkbox-name=item
+                                        input(id=i+1000 type='checkbox')
+                                        span.checkmark
+                    .filter-group
+                        .filter-group-title Цена
+                        .filter-price(id="filter-price")
+                            .filter-price-inputs
+                                .form-group
+                                    input(id="minCost" type='text', value='0', min='0', max='8246').form-control
+                                .form-group
+                                    input(id="maxCost" type='text', value='8246', min='0', max='8246').form-control
+                            .filter-price-range
+                                #filter-slider
+                button.filter-submit Применить
+mixin menu 
+    .menu(id="menu")
+        .menu-content
+            .menu-content-head(id="menu-close")
+                span Меню
+                img(src="./images/close.svg", alt="")
+            .menu-content-body
+                ul
+                    each category in menu
+                        if category.submenu.length > 0
+                            li 
+                                a(href="catalog.html").with-submenu= category.name
+                                    .submenu-show
+                                ul 
+                                    li.submenu-btn-back
+                                        |Назад 
+                                    each subitem in category.submenu
+                                        if subitem.list.length > 0
+                                            a(href="category.html").with-submenu= subitem.name
+                                                .submenu-show
+                                            ul
+                                                li.submenu-btn-back
+                                                    |Назад 
+                                                each item in subitem.list
+                                                    
+                                                    li  
+                                                        a(href="product.html")= item
+                                        else
+                                            li 
+                                                a(href="#")= subitem.name
+                        else 
+                            li
+                                if category.name == "Акции"
+                                    a(href="#").sale
+                                        span= category.name
+                                else
+                                    a(href="#")= category.name
+                            
+                .menu-phones
+                    a(href="#") 
+                        img(src="./images/phone.svg", alt="")
+                        span +38 (098) 261 17 33
+                    a(href="#") 
+                        img(src="./images/phone.svg", alt="")
+                        span +38 (098) 261 17 33
+                    a(href="#") 
+                        img(src="./images/phone.svg", alt="")
+                        span +38 (098) 261 17 33
+                .menu-additional
+                    a(href="#") Доставка
+                    a(href="#") Обмен и возврат
+                    a(href="#") Блог
+                    a(href="#") Контакты
+                .menu-language
+                    a(href="#") 
+                        img(src="./images/ru.svg", alt="")
+                    a(href="#") 
+                        img(src="./images/ua.svg", alt="")
+//- === footer === 
+mixin footer
+    // mixin footer
+    footer.footer
+        .subscribe
+            .title-2 Подпишись на Акции
+            .container
+                .subscribe-form    
+                    input(placeholder="Введите Email").subscribe-form-input
+            .subscribe-social
+                a(href="#")
+                    img(src="./images/social-3.svg", alt="")
+                a(href="#")
+                    img(src="./images/social-2.svg", alt="")
+                a(href="#")
+                    img(src="./images/social-1.svg", alt="")
+        .help
+            .container
+                +accordion-item("Условия",help,"red")
+                +accordion-item("Помощь",help,"red")
+                +accordion-item("Сотрудничесто",help,"red")
+        .contact
+            .container
+                .contact-title Контакты
+                .contact-item
+                    .contact-item-icon
+                        img(src="./images/clock.svg", alt="")
+                    .contact-item-text
+                        p Пн - Пт: с 9:00 до 18:00 
+                        p СБ - Вс: выходной
+                .contact-item
+                    .contact-item-icon
+                        img(src="./images/mail.svg", alt="")
+                    .contact-item-text
+                        p 
+                            a(href="mailto:info@rizdvo.ua") info@rizdvo.ua
+                .contact-item
+                    .contact-item-icon
+                        img(src="./images/place.svg", alt="")
+                    .contact-item-text
+                        p Днепр,<br>пр. Слобожанський, 29, оф. 701
+                .copyright
+                    p © 2019 Все права защищены
+                
+
+    // / mixin footer 
+//- === /footer ===
+
